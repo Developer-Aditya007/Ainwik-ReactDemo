@@ -1,0 +1,45 @@
+body{
+  background-color: wheat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+  background-color: #fff;
+  padding: 10px;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+nav ul li{
+  list-style: none;
+    font-weight: 500;
+  color: blue;
+}
+nav ul li a{
+  text-decoration: none;
+  font-weight: 500;
+  color: blue;
+}
+
+.child{
+  display: none;
+  position: absolute;
+  width: 150px;
+  background-color: rgba(0,0,255,0.8);
+  right: 3px !important;
+}
+.child li a{
+  color: #fff;
+}
+.parent{
+  position: relative;
+}
+
+.parent:hover .child{
+   /* display: flex;
+   flex-direction: column; */
+   display: block;
+}

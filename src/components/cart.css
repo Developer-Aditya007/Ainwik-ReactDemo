@@ -1,0 +1,16 @@
+.cart{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.cart-value{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 23px;
+    height: 23px;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    color: aliceblue;
+}
