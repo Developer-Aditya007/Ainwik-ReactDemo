@@ -10,7 +10,10 @@
 // import Condition from './components/Conditional'
 
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Header from "./pages/Header"
+import Header from "./components/Header"
+import  Footer  from "./components/Footer"
+// import Footer  from "./components/Footer"
+// import Header from "./pages/Header"
 
 // function App() {
 //   const userinfo = ["John",21,"USA"]
@@ -43,9 +46,10 @@ function App() {
        <Header/>
        <Routes>
         <Route path="/" element={<h1>This is DashBoard</h1>}/>
-          <Route path="/about" element={<h1>This is About Page</h1>}/>
-          <Route path="/footer" element={<h1>This is Footer Section</h1>}/>
+          <Route path="/about" element={<h1 className="bg-red-500">This is About Page</h1>}/>
+          {/* <Route path="/footer" element={}/> */}
        </Routes>
+       <Footer/>
        </BrowserRouter>
   )
 }
