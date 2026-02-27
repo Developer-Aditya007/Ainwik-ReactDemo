@@ -12,6 +12,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Header from "./components/Header"
 import  Footer  from "./components/Footer"
+import Feature from "./pages/Feature"
+import Engagement from "./pages/Engagement"
+import ErrorPage from "./components/ErrorPage"
 // import Footer  from "./components/Footer"
 // import Header from "./pages/Header"
 
@@ -45,9 +48,10 @@ function App() {
        <BrowserRouter>
        <Header/>
        <Routes>
+        <Route path="/*" element={<ErrorPage/>}/>
         <Route path="/" element={<h1>This is DashBoard</h1>}/>
-          <Route path="/about" element={<h1 className="bg-red-500">This is About Page</h1>}/>
-          {/* <Route path="/footer" element={}/> */}
+          <Route path="/engagement" element={<Engagement/>}/>
+          <Route path="/feature" element={<Feature/>}/>
        </Routes>
        <Footer/>
        </BrowserRouter>

@@ -22,13 +22,15 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import {Link} from 'react-router-dom'
+
 
 const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '/feature', icon: ChartPieIcon },
+  { name: 'Engagement', description: 'Speak directly to your customers', href: '/engagement', icon: CursorArrowRaysIcon },
+  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '/engagement', icon: FingerPrintIcon },
+  { name: 'Integrations', description: 'Connect with third-party tools', href: '/engagement', icon: SquaresPlusIcon },
+  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '/engagement', icon: ArrowPathIcon },
 ]
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
@@ -64,7 +66,7 @@ export default function Header() {
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
-              Product
+              Courses
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-500" />
             </PopoverButton>
 
@@ -82,10 +84,10 @@ export default function Header() {
                       <item.icon aria-hidden="true" className="size-6 text-gray-400 group-hover:text-white" />
                     </div>
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-white">
+                      <Link to={item.href} className="block font-semibold text-white">
                         {item.name}
                         <span className="absolute inset-0" />
-                      </a>
+                      </Link>
                       <p className="mt-1 text-gray-400">{item.description}</p>
                     </div>
                   </div>
