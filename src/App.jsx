@@ -15,6 +15,7 @@ import  Footer  from "./components/Footer"
 import Feature from "./pages/Feature"
 import Engagement from "./pages/Engagement"
 import ErrorPage from "./components/ErrorPage"
+import Testimonials from "./components/Testimonials"
 // import Footer  from "./components/Footer"
 // import Header from "./pages/Header"
 
@@ -47,12 +48,14 @@ function App() {
   return (
        <BrowserRouter>
        <Header/>
+       
        <Routes>
         <Route path="/*" element={<ErrorPage/>}/>
         <Route path="/" element={<h1>This is DashBoard</h1>}/>
           <Route path="/engagement" element={<Engagement/>}/>
           <Route path="/feature" element={<Feature/>}/>
        </Routes>
+       <Testimonials/>
        <Footer/>
        </BrowserRouter>
   )
