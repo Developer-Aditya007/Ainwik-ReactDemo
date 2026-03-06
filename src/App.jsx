@@ -15,6 +15,7 @@ import  Footer  from "./components/Footer"
 import Feature from "./pages/Feature"
 import Engagement from "./pages/Engagement"
 import ErrorPage from "./components/ErrorPage"
+import Login from "./components/Login"
 // import Footer  from "./components/Footer"
 // import Header from "./pages/Header"
 
@@ -52,6 +53,7 @@ function App() {
         <Route path="/" element={<h1>This is DashBoard</h1>}/>
           <Route path="/engagement" element={<Engagement/>}/>
           <Route path="/feature" element={<Feature/>}/>
+           <Route path="/login" element={<Login/>}/>
        </Routes>
        <Footer/>
        </BrowserRouter>
