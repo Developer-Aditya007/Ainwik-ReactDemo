@@ -14,13 +14,10 @@ const handleSubmit =(event)=>{
     console.log({"Form Data":formData})
 } 
   
-if(formData.email){
-    Navigate()
-}
- 
+
   return (
     <div>
-      <form action="" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
 <h1>login Page</h1>
         <input
           type="email"
