@@ -53,7 +53,7 @@ function GoogleOAuth() {
                     <p>ProfileId: {profile.id}</p>
                     <br />
                     <br />
-                    <button onClick={logOut}>Log out</button>
+                    <button className='border' onClick={logOut}>Log out</button>
                 </div>
             ) : (
                 <button onClick={() => login()}>Sign in with Google 🚀 </button>
